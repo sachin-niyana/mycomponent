@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+.accordion_border {
+  border: 1.5px solid #212529 !important;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 10px;
+  backdrop-filter: blur(15px) !important;
+  max-width: 970px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.accordion-button {
+  background-color: transparent !important;
+  color: black !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 25px !important;
+  height: 25px !important;
+  margin-left: auto;
+  margin-right: 20px;
+  content: "<";
+  background-image: url("./assets/img/png/arrow.png") !important;
+  background-size: cover !important;
+  transform: rotate(90deg) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.accordion-button:not(.collapsed) {
+  border-color: transparent !important;
+  box-shadow: unset !important;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-90deg) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #212529;
 }
