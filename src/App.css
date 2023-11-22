@@ -58,8 +58,8 @@
 }
 
 .home-btn {
-  width: 30px;
-  height: 30px;
+  width: 30px !important;
+  height: 30px !important;
 }
 
 .close-btn {
@@ -72,6 +72,27 @@
 
 .cursor {
   cursor: pointer;
+}
+
+/* {{{{{{{{{{{{{{{{{{{{{{{{{Sidebar}}}}}}}}}}}}}}}}}}}}}}}}}} */
+.side_show {
+  position: absolute;
+  left: -100%;
+  width: 500px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #aad77e !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: all 1000ms linear !important;
+}
+
+.nav_md {
+  top: 0;
 }
 
 @media (max-width: 768px) {
