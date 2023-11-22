@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none !important ;
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
 .accordion_border {
   border: 1.5px solid #212529 !important;
   background-origin: border-box;
@@ -40,4 +47,54 @@
 
 .accordion-button:not(.collapsed) {
   color: #212529;
+}
+
+/* {{{{{{{{{{{{{{{{{{{{{{{{{Navbar}}}}}}}}}}}}}}}}}}}}}}}}}} */
+
+.logo-btn {
+  padding: 12px 20px;
+  background-color: red;
+  border: none;
+}
+
+.home-btn {
+  width: 30px;
+  height: 30px;
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav_sm {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: all 500ms linear;
+  }
+
+  .nav_show {
+    top: 0;
+  }
+
+  .overflow_hidden {
+    overflow: hidden;
+  }
 }
